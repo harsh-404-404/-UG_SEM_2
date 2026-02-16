@@ -22,8 +22,10 @@ void Student::input(){
 
     std::cout << "Enter your Name: ";
     std::getline(std::cin >> std::ws,name);
+
     std::cout << "Enter your id: ";
     std::cin >> id;
+    
     for(int i = 0; i < 5; ++i){
         std::cout << "Enter marks of subject " << i + 1 << ": ";
         std::cin >> marks[i];
@@ -60,6 +62,7 @@ void Student::print(){
     std::cout << "Name :" << name << '\n';
     std::cout << "persentage: " << p << "%" << '\n';
     std::cout << "Grade: " << g << '\n';
+
 }
 
 

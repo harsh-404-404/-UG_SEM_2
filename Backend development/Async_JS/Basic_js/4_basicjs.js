@@ -38,6 +38,6 @@ console.log(reducedArray);
 
 let xyz = [1,2,3,4,5]
 xyz = xyz.map((value) => value * 3)
-.filter((value) => value % 2 == 0)
+.filter((value) => value % 2 == 1)
 .reduce((acc,curr) => acc + curr,0)
 console.log(xyz);

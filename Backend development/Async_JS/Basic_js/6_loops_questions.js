@@ -13,7 +13,7 @@ let people = [
 
 // for(let i = 0; i < 9;++i){
 //     console.log(people[i]["name"])
-// }
+// }ṇ
 let arr = people.map((user) => {
     console.log(user.name);
 });
