@@ -10,9 +10,12 @@ class Student{
 
     int tm {};
     float p {};
-    char g {};
+    char g {}; 
 
     public:
+    Student(int marks[5]){
+        
+    }
         void input();
         void cal();
         void print();
@@ -25,7 +28,7 @@ void Student::input(){
 
     std::cout << "Enter your id: ";
     std::cin >> id;
-    
+
     for(int i = 0; i < 5; ++i){
         std::cout << "Enter marks of subject " << i + 1 << ": ";
         std::cin >> marks[i];
