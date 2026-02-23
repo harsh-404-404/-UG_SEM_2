@@ -15,3 +15,34 @@ setTimeout(callback function,timeInMS)
 
 
 asyncrunus line will always run after all syncrunus lines are done with
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+npm init -y 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
