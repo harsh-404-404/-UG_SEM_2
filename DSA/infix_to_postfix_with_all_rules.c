@@ -68,7 +68,7 @@ int main() {
             push(infix[i]);
         
 
-        // If ')'
+        }// If ')'
         else if (infix[i] == ')') {
             while (!isEmpty() && peek() != '(')
                 postfix[j++] = pop();
@@ -89,7 +89,7 @@ int main() {
 
         i++;
     }
-
+    
     // Pop remaining operators
     while (!isEmpty()) {
         postfix[j++] = pop();
