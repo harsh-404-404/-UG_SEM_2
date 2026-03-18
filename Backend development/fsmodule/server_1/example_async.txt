@@ -1,0 +1,2 @@
+Data from writeFile()
+Appending in a file (Async)

@@ -5,7 +5,7 @@ const add = (a,b) => {
 const sub = (a,b) => {
     return a - b;
 }
-console.log(add(6,6))
+//console.log(add(6,6))
 //module.exports can only be used onece and can only exports one thing
 // module.exports = "Shrey"
 // module.exports = 5

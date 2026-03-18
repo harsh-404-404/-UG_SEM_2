@@ -4,11 +4,10 @@ let api = "https://jsonplaceholder.typicode.com/posts"
 
 fetch(api)
 .then((data) => {
-    return data.json();   //data it self well be metadata of api responce and to parse data we use .json()
+    return data.json()   //data it self well be metadata of api responce and to parse data we use .json()
 })
-.then((responce) => {
-    console.log(responce)
+.then()
+.catch((error) => {   //this is for error handleing because promise faild
+    console.log(error);
 })
-.catch(() => {   //this is for error handleiing because promise faild
-    
-})
+.then()

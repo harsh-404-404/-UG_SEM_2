@@ -1,15 +1,16 @@
-let btn = document.getElementById("btn");
-let quote = document.getElementById("quote");
-let api = "https://api.quotable.io/random";
+let api = "https://jsonplaceholder.typicode.com/posts";   //this url is kinda broken so error is expected!
 
 
-btn.addEventListener("click", async () => {
-
-  try {
+async function getMeData(){
+  try{
+  
     let metadata = await fetch(api);
     let res = await metadata.json();
-    quote.innerText = res.content;
-  } catch (error) {
-  console.log(error);
+    console.log(res);
+  
+  }catch (error){
+    console.log(error);
   }
-});
+
+}
+getMeData();

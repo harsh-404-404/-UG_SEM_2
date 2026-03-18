@@ -3,8 +3,8 @@ frontend + backend = full stack devlopment.
 backend works on rquest/responce.
 client sends request and server sends responce
 
-syncrnus java script code (single threded code)
-asyncrunus java script code (multi threded code) (Node js)
+synchronous java script code (single threded code)
+asynchronous java script code (multi threded code) (Node js)
 
 
 
@@ -14,7 +14,7 @@ Lecture 2
 setTimeout(callback function,timeInMS)
 
 
-asyncrunus line will always run after all syncrunus lines are done with
+asynchronous line will always run after all synchronous lines are done with
 
 
 

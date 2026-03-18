@@ -18,5 +18,5 @@ let arr = people.map((user) => {
     console.log(user.name);
 });
 
-let age = people.filter((user) => user.age > 28).map((user) => user.name)
+let age = people.filter((user) => user.age > 0).map((user) => user.name)
 console.log(age)

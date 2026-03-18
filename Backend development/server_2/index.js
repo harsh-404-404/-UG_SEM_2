@@ -1,28 +1,40 @@
 const http = require("http");
-//console.log(http) // http is object of fuction use this to see allkeys
 
+//res.write() can only send string or Buffers (raw binary data).
+//a built-in class used to represent a fixed-length sequence of bytes, designed to handle raw binary data efficiently
+// When you use the fs module to read a PDF, an image, or an audio file, it reads that file as a "Buffer." 
+// We will pass that raw Buffer directly into res.write() to send files to the user.
 
-//http:localhost:3000
 const app = http.createServer((req,res) => {
-    console.log("i got request");
-    //console.log(req);
-
-    console.log(req.url) //with req.url we can know which path is request
+    
     if(req.url == "/"){
-        console.log("Welcome to home page");
+        console.log("User Requested Home page");
+        res.writeHead(200, { 'Content-Type': 'text/json' }); //this tell browser html not text!!
+        res.write("<h1>Hello page</h1>");
+        res.write("<h6>Hello page</h6>");
+        res.end();
     }
     else if(req.url == "/about"){
-        console.log("welcome to about page");
+        res.write("welcome to about page");
+        res.end();
     }
     else if(req.url == "/contact"){
-        console.log("welcome to contact page");
+        res.write("welcome to contact page");
+        res.end();
     }
     else{
-        console.log("404 Page not found !!");
-    }
+        res.writeHead(404, { 'Content-Type': 'text/html' }); //this tell browser html not text!!
+        res.write("<h1>404 Page not found !!</h1>");
+        res.write("<h1>!! maybe you made a mistake !! </h1>");
+        res.end();
+        //you can not write more then one end() //because it is used to end request
+        //res.end();
+        //res.end();
+        //response.end() can only be used once it's primery task is to close titcke/request
+        //but you can send data useing response.end()
+    }   
+});
 
-}); //our server is called app
-
-app.listen(3000, () => {
+app.listen(3000, () =>{
     console.log("Server is runninng......")
 });
