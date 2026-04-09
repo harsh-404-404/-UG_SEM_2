@@ -59,7 +59,7 @@ public:
         }
         end--;
     }
-
+    
     void update(const int value,int index){
         if(!is_indexed(index)){
             std::cerr << "Invalid index to update!\n";
@@ -122,6 +122,7 @@ public:
             }
         }
     }
+    
 
 
 };
@@ -142,4 +143,7 @@ int main(){
     list.print();
     list.sort();
     list.print();
+
+    
+
 }
