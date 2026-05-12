@@ -1,8 +1,6 @@
 const express = require("express")
 const path = require("path")
 
-const aboutFileLocation = path.join(__dirname,"about.html")
-
 const app = express();
 
 app.get("/", (req,res) => {
@@ -12,7 +10,7 @@ app.get("/", (req,res) => {
 });
 
 app.get("/about", (req,res) => {
-    res.sendFile(aboutFileLocation); 
+    res.sendFile(path.join(__dirname,"about.html")); 
     res.json({
         name : "Shrey",
         university : "shoolini",
@@ -27,9 +25,6 @@ users_data = require("./users.json")
 app.get("/api/user", (req, res) => {
     res.json(users_data);  
 })
-app.listen(3000, () => {
-    console.log("server is running...");
-});
 
 
 //Dynamic Routing
@@ -52,6 +47,10 @@ app.get("/api/user/:id", (req, res) => {
         }else{
             res.json(user);
         }
-
+        
     }
 })
+
+app.listen(3000, () => {
+    console.log("server is running...");
+});

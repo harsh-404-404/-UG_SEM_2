@@ -47,7 +47,7 @@ const app = http.createServer( async (req, res) => {
     }
     
     // Async
-    fs.readFile("example_async.txt", "utf-8", () => {
+    fs.readFile("example_async.txt", "utf-8", (error) => {
         if(error) console.log("Error reading async file:", error);
         else console.log("Async read data:\n", data);
     });
